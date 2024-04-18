@@ -1,0 +1,41 @@
+@font-face {
+  font-family: Raleway;
+  src: url(../fonts/Raleway-VariableFont_wght.ttf);
+  //weights used: 400, 700;
+}
+
+$font: Raleway;
+
+$gradient: linear-gradient(90deg rgb(255, 163, 153), rgb(255, 77, 151));
+$paleBlue: rgb(221, 219, 255);
+$grayishBlue: rgb(132, 135, 148);
+$darkBlue: rgb(29, 44, 103);
+$veryDarkBlue: rgb(12, 18, 44);
+
+html {
+  font-size: 14px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $veryDarkBlue;
+  background-image: url(../img/bg-desktop.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  font-family: $font;
+  color: $paleBlue;
+
+  @media screen and (max-width: 980px) {
+    background-image: url(../img/bg-mobile.png);
+    background-position: center;
+    background-size: cover;
+  }
+}

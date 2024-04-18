@@ -1,0 +1,235 @@
+@font-face {
+  font-family: Raleway;
+  src: url(../fonts/Raleway-VariableFont_wght.ttf);
+}
+html {
+  font-size: 14px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgb(12, 18, 44);
+  background-image: url(../img/bg-desktop.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  font-family: Raleway;
+  color: rgb(221, 219, 255);
+}
+@media screen and (max-width: 980px) {
+  body {
+    background-image: url(../img/bg-mobile.png);
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 920px;
+  gap: 30px;
+}
+@media screen and (max-width: 980px) {
+  main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    margin: 25px;
+    gap: 16px;
+  }
+}
+main .first-part {
+  height: 200px;
+  width: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: rgb(29, 44, 103);
+  padding: 40px;
+  border-radius: 15px 100px 15px 15px;
+}
+@media screen and (max-width: 980px) {
+  main .first-part {
+    width: auto;
+  }
+}
+main .first-part .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+}
+main .first-part .icons .icon-container {
+  height: 48px;
+  width: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgb(12, 18, 44);
+  border-radius: 10px;
+}
+main .second-part {
+  position: relative;
+  -ms-flex-item-align: last baseline;
+      align-self: last baseline;
+  min-height: 153px;
+  width: 540px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: rgb(29, 44, 103);
+  padding: 35px 40px 40px;
+  border-radius: 15px;
+}
+@media screen and (max-width: 980px) {
+  main .second-part {
+    width: 100%;
+  }
+}
+main .second-part .storage {
+  font-weight: 400;
+}
+main .second-part .progress-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+main .second-part .progress-container .progress-bar {
+  position: relative;
+  height: 20px;
+  background-color: rgb(12, 18, 44);
+  border-radius: 10px;
+}
+main .second-part .progress-container .progress-bar .progressed {
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  height: 14px;
+  width: 75%;
+  background: -webkit-gradient(linear, left top, right top, from(rgb(255, 77, 151)));
+  background: linear-gradient(90deg rgb(255, 163, 153), rgb(255, 77, 151));
+  border-radius: 9px;
+}
+main .second-part .progress-container .progress-bar .point {
+  position: absolute;
+  top: 50%;
+  left: 335px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  height: 11px;
+  width: 11px;
+  background-color: rgb(221, 219, 255);
+  border-radius: 50%;
+}
+@media screen and (max-width: 980px) {
+  main .second-part .progress-container .progress-bar .point {
+    left: calc(75% - 11px);
+  }
+}
+main .second-part .progress-container .min-max {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-weight: 700;
+}
+main .second-part .left {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: -47px;
+  left: 320px;
+  height: 72px;
+  width: 180px;
+  border-radius: 10px 10px 0 10px;
+  background-color: white;
+  font-size: 3rem;
+  font-weight: 700;
+  color: rgb(12, 18, 44);
+}
+@media screen and (max-width: 980px) {
+  main .second-part .left {
+    top: auto;
+    left: 50%;
+    bottom: -36px;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    border-radius: 10px;
+  }
+}
+main .second-part .left::after {
+  content: "";
+  position: absolute;
+  right: 0px;
+  bottom: -20px;
+  height: 22px;
+  width: 22px;
+  -webkit-clip-path: polygon(100% 0, 0% 0, 100% 100%);
+          clip-path: polygon(100% 0, 0% 0, 100% 100%);
+  background-color: white;
+}
+@media screen and (max-width: 980px) {
+  main .second-part .left::after {
+    visibility: hidden;
+  }
+}
+main .second-part .left span {
+  font-size: 0.8rem;
+  color: rgb(132, 135, 148);
+  margin-left: 10px;
+}/*# sourceMappingURL=index.css.map */

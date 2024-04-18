@@ -1,0 +1,158 @@
+main {
+  display: flex;
+  width: 920px;
+  gap: 30px;
+
+  @media screen and (max-width: 980px) {
+    flex-direction: column;
+    width: 100%;
+    margin: 25px;
+    gap: 16px;
+  }
+
+  .first-part {
+    height: 200px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $darkBlue;
+    padding: 40px;
+    border-radius: 15px 100px 15px 15px;
+
+    @media screen and (max-width: 980px) {
+      width: auto;
+    }
+
+    .logo {
+    }
+
+    .icons {
+      display: flex;
+      gap: 16px;
+
+      .icon-container {
+        height: 48px;
+        width: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $veryDarkBlue;
+        border-radius: 10px;
+
+        .icon {
+        }
+      }
+    }
+  }
+
+  .second-part {
+    position: relative;
+    align-self: last baseline;
+    min-height: 153px;
+    width: 540px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $darkBlue;
+    padding: 35px 40px 40px;
+    border-radius: 15px;
+
+    @media screen and (max-width: 980px) {
+      width: 100%;
+    }
+    .storage {
+      font-weight: 400;
+    }
+
+    .progress-container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      .progress-bar {
+        position: relative;
+        height: 20px;
+        background-color: $veryDarkBlue;
+        border-radius: 10px;
+
+        .progressed {
+          position: absolute;
+          top: 50%;
+          left: 3px;
+          transform: translateY(-50%);
+          height: 14px;
+          width: 75%;
+          background: $gradient;
+          border-radius: 9px;
+        }
+
+        .point {
+          position: absolute;
+          top: 50%;
+          left: 335px;
+          transform: translateY(-50%);
+          height: 11px;
+          width: 11px;
+          background-color: $paleBlue;
+          border-radius: 50%;
+
+          @media screen and (max-width: 980px) {
+            left: calc(75% - 11px);
+          }
+        }
+      }
+
+      .min-max {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 700;
+      }
+    }
+
+    .left {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: -47px;
+      left: 320px;
+      height: 72px;
+      width: 180px;
+      border-radius: 10px 10px 0 10px;
+      background-color: white;
+      font-size: 3rem;
+      font-weight: 700;
+      color: $veryDarkBlue;
+
+      @media screen and (max-width: 980px) {
+        top: auto;
+        left: 50%;
+        bottom: -36px;
+        transform: translateX(-50%);
+        border-radius: 10px;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0px;
+        bottom: -20px;
+        height: 22px;
+        width: 22px;
+        clip-path: polygon(100% 0, 0% 0, 100% 100%);
+        background-color: white;
+
+        @media screen and (max-width: 980px) {
+          visibility: hidden;
+        }
+      }
+
+      span {
+        font-size: 0.8rem;
+        color: $grayishBlue;
+        margin-left: 10px;
+      }
+    }
+  }
+}
